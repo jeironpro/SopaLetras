@@ -1,0 +1,84 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+#sopa_letras {
+    display: grid;
+    grid-template-columns: repeat(15, 30px);
+    grid-template-rows: repeat(15, 30px);
+    gap: 2px;
+    margin: 10px auto;
+    width: max-content;
+}
+
+#sopa_letras div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+}
+
+#sopa_letras .selected {
+    background-color: yellow;
+}
+
+#sopa_letras .found {
+    background-color: lightgreen;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 40px;
+    background-color: #F0F0F0;
+}
+
+ul li {
+    font-size: 18px;
+    color: green;
+}
+
+#mensaje {
+    margin-top: 10px;
+    font-size: 20px;
+    color: green;
+}
+
+@media screen and (max-width: 824px) {
+    #sopa_letras {
+        grid-template-columns: repeat(15, 28px);
+        grid-template-rows: repeat(15, 28px);
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        justify-content: space-evenly;
+        gap: 0px;
+        height: 60px;
+    }
+
+    ul li {
+        font-size: 16px;
+    }
+}
